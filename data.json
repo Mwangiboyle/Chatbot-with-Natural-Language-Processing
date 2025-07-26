@@ -1,0 +1,55 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hey", "Is anyone there?", "Hello", "Sasa", "Habari"],
+      "responses": ["Karibu! How can I help you today?", "Hello! Welcome to our Kenyan kitchen!", "Hi there! Ready to explore delicious Kenyan dishes?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Kwheri", "Tutaonana"],
+      "responses": ["Tutaonana tena! Come back soon for more tasty meals!", "Asante sana! Have a great day!", "Bye! Don't forget to try our pilau next time!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help", "Asante"],
+      "responses": ["Karibu sana!", "Glad to help!", "Asante! We’re happy to serve you.", "You're most welcome!"]
+    },
+    {
+      "tag": "about",
+      "patterns": ["Who are you?", "What are you?", "Who you are?", "Tell me about this restaurant"],
+      "responses": ["I'm KaribuBot, your assistant from our Kenyan kitchen!", "I'm your virtual guide to the best Kenyan meals!"]
+    },
+    {
+      "tag": "name",
+      "patterns": ["what is your name", "what should I call you", "whats your name?"],
+      "responses": ["You can call me KaribuBot.", "I'm KaribuBot!", "Just call me KaribuBot."]
+    },
+    {
+      "tag": "help",
+      "patterns": ["Could you help me?", "Can you help?", "What can you do for me?", "I need help with ordering", "support me please"],
+      "responses": ["Of course! I can help you explore our menu, place orders, or answer any questions.", "Sure! What would you like to know or order today?", "Yes, I’m here to help with anything you need."]
+    },
+    {
+      "tag": "createaccount",
+      "patterns": ["I need to create a new account", "how to open a new account", "I want to create an account", "can you create an account for me"],
+      "responses": ["You can create an account on our website to order online or track your favorite dishes.", "Just visit our website and sign up to enjoy seamless ordering."]
+    },
+    {
+      "tag": "complaint",
+      "patterns": ["I have a complaint", "I want to raise a complaint", "there is a complaint about the service", "the food was not good", "delivery took too long"],
+      "responses": ["We’re sorry for the inconvenience. Please share your complaint and we’ll sort it out immediately.", "Kindly tell us what happened so we can make it right."]
+    },
+    {
+      "tag": "menu",
+      "patterns": ["What food do you have?", "Show me your menu", "What are you serving?", "What Kenyan dishes are available?", "Ninataka chakula gani mnao?"],
+      "responses": ["We serve delicious Kenyan meals like ugali, nyama choma, sukuma wiki, chapati, githeri, pilau, and samaki wa kukaanga!", "Our menu includes local favorites like pilau, chapati, mukimo, and more. Hungry yet?"]
+    },
+    {
+      "tag": "order",
+      "patterns": ["I want to order food", "How can I place an order?", "Order nyama choma", "Order ugali and sukuma wiki", "I need food delivery"],
+      "responses": ["You can place your order through our website or app. Just select your favorite Kenyan dishes!", "No problem! Just tell me what you'd like to order."]
+    }
+  ]
+}
+
