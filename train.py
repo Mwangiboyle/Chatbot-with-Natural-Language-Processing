@@ -1,6 +1,6 @@
 from sklearn.preprocessing import LabelEncoder
 import pickle
-from load_data import load_chatbot_data, generate_vectors
+from Utils import load_chatbot_data, generate_vectors
 
 # Load training data from JSON
 training_sentences, training_labels, labels, responses = load_chatbot_data("data.json")
