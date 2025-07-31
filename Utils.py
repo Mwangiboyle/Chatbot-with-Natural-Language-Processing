@@ -40,9 +40,9 @@ def load_chatbot_data(json_path):
 
 def generate_vectors(sentences: List[str], save_tokenizer=True,
                      tokenizer_path="tokenizer.pickle") -> np.ndarray:
-    vocab_size = 1000
+    vocab_size = 5000
     #embedding_dim = 32
-    max_len = 20
+    max_len = 32
     oov_token = "<OOV>"
 
     tokenizer = Tokenizer(num_words=vocab_size, oov_token=oov_token)

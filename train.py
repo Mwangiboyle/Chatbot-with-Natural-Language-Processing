@@ -34,9 +34,9 @@ print(f"training_vectors_shape: {len(training_vectors)}")
 
 # Instantiate
 # Instantiate
-vocab_size = 1000
-embedding_dim =16
-max_len = 20
+vocab_size = 5000
+embedding_dim =32
+max_len = 32
 
 model = Sequential()
 model.add(Embedding(vocab_size, embedding_dim, input_length=max_len))
@@ -53,14 +53,14 @@ model.compile(loss='sparse_categorical_crossentropy',
 print(model.summary())
 epochs = 500
 early_stop = EarlyStopping(
-    monitor='val_loss',
+    monitor='loss',
     patience=5,
     restore_best_weights=True
 )
 history = model.fit(training_vectors,
-                    np.array(training_labels_encoded),validation_split=0.1,callbacks=[early_stop], epochs=epochs)
+                    np.array(training_labels_encoded), epochs=epochs)
 
 
 # to save the trained model
-model.save("chat_model")
+model.save("chat_model.keras")
 
