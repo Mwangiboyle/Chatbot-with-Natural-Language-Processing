@@ -1,5 +1,7 @@
 import json
-import numpy
+from typing import List
+import numpy as np
+from numpy._core.multiarray import array
 from tensorflow.keras.preprocessing.text import Tokenizer
 import pickle
 from tensorflow.keras.preprocessing.sequence import pad_sequences
@@ -36,7 +38,8 @@ def load_chatbot_data(json_path):
     return training_sentences, training_labels, labels, responses
 
 
-def generate_vectors(sentences -> array):
+def generate_vectors(sentences: List[str], save_tokenizer=True,
+                     tokenizer_path="tokenizer.pickle") -> np.ndarray:
     vocab_size = 1000
     #embedding_dim = 32
     max_len = 20
@@ -49,8 +52,9 @@ def generate_vectors(sentences -> array):
     sequences = tokenizer.texts_to_sequences(sentences)
     Training_sequences = pad_sequences(sequences, truncating='post', maxlen=max_len)
     # to save the fitted tokenizer
-    with open('tokenizer.pickle', 'wb') as handle:
-        pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    if save_tokenizer:
+        with open(tokenizer_path, 'wb') as handle:
+            pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
     return Training_sequences
 
